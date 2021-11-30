@@ -1,0 +1,14 @@
+client.command("ban", {
+  required_permissions: ["BAN_MEMBERS"],
+  execute: async ({message, args}) => {
+    let member = message.mentions.members.first()
+    if (!member) return message.reply('Prosím, označ někoho koho chceš zabanovat!')
+    let reason = let reason = args.slice(1).join(" ");
+    if (!reason) reason = 'Žádný důvod';
+    if (!member.banable) return message.reply('Nemůžeš zabanovat tohohle člověka!')
+     
+    member.ban(reason)
+      .catch(err => console.log(err))
+      .then(()=>{message.reply(`**${member.tag}** byl zabanován!`,false)})
+  }
+}) 
