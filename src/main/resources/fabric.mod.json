@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "bou",
+  "version": "${version}",
+  "name": "Blessing: Unbinding",
+  "description": "A simple way to remove Curse of Binding",
+  "authors": [
+    "GGWP Jason"
+  ],
+  "contact": {
+    "homepage": "https://ggwpgaming.com",
+    "sources": ""
+  },
+  "license": "MIT License",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.ggwpgaming.bou.BouMod"
+    ],
+    "client": [
+      "net.ggwpgaming.bou.ClientInit"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric-api": "*",
+    "minecraft": "1.20.1",
+    "java": ">=17"
+  }
+}
